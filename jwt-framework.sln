@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt-framework", "jwt-framework\jwt-framework.csproj", "{5ACA3635-D04A-4CD4-9E8F-8564DE1EF7AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ACA3635-D04A-4CD4-9E8F-8564DE1EF7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACA3635-D04A-4CD4-9E8F-8564DE1EF7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACA3635-D04A-4CD4-9E8F-8564DE1EF7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACA3635-D04A-4CD4-9E8F-8564DE1EF7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D9B103E-F1F0-475B-959F-DD69B1AF9C34}
+	EndGlobalSection
+EndGlobal
