@@ -9,10 +9,8 @@ namespace eg_01_csharp_jwt
 {
     public class ExampleBase
     {        
-        private const int TOKEN_REPLACEMENT_IN_SECONDS = 10 * 60;
-
         private static string AccessToken { get; set; }
-        private static int expiresIn;
+        private static DateTime expiresIn = DateTime.MinValue;
         private static Account Account { get; set; }
 
         protected static ApiClient ApiClient { get; private set; }
@@ -29,8 +27,7 @@ namespace eg_01_csharp_jwt
 
         public void CheckToken()
         {
-            if (AccessToken == null
-                || (DateTime.Now.Millisecond + TOKEN_REPLACEMENT_IN_SECONDS) > expiresIn)
+            if (AccessToken == null || DateTime.Now > expiresIn)
             {
                 Console.WriteLine("Obtaining a new access token...");
                 UpdateToken();
@@ -52,7 +49,7 @@ namespace eg_01_csharp_jwt
 
             ApiClient = new ApiClient(Account.BaseUri + "/restapi");
             
-            expiresIn = DateTime.Now.Second + authToken.expires_in.Value;
+            expiresIn = DateTime.Now.AddSeconds(authToken.expires_in.Value);
         }
 
         private Account GetAccountInfo(OAuth.OAuthToken authToken)
